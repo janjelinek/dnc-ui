@@ -1548,3 +1548,126 @@
   padding: 1rem;
   border-top: 1px solid var(--dnc-border);
 }
+
+/* Carousel */
+.dnc-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid var(--dnc-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--dnc-bg);
+  cursor: default;
+}
+
+.dnc-carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.dnc-carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.3s ease;
+  transform: translateX(calc(-100% * var(--dnc-carousel-index, 0)));
+}
+
+.dnc-carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.dnc-carousel-prev,
+.dnc-carousel-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: default;
+  isolation: isolate;
+}
+
+.dnc-carousel-prev {
+  left: 0;
+}
+
+.dnc-carousel-next {
+  right: 0;
+  left: auto;
+}
+
+.dnc-carousel-zone-fill {
+  position: absolute;
+  inset: 0;
+  width: calc(var(--dnc-progress, 0) * 100%);
+  background: var(--dnc-progress-color);
+  opacity: 0.25;
+  transition: none;
+  pointer-events: none;
+}
+
+.dnc-carousel-arrow {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.dnc-carousel-prev:hover .dnc-carousel-arrow,
+.dnc-carousel-next:hover .dnc-carousel-arrow {
+  opacity: 1;
+}
+
+.dnc-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+}
+
+.dnc-carousel-dot {
+  position: relative;
+  overflow: hidden;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--dnc-border);
+  background: var(--dnc-bg);
+  cursor: default;
+  isolation: isolate;
+}
+
+.dnc-carousel-dot:hover {
+  background: #e8e8e8;
+}
+
+.dnc-carousel-dot--active {
+  background: var(--dnc-progress-color);
+  border-color: var(--dnc-progress-color);
+}
+
+.dnc-carousel-dot-fill {
+  position: absolute;
+  inset: 0;
+  width: calc(var(--dnc-progress, 0) * 100%);
+  background: var(--dnc-progress-color);
+  opacity: 0.5;
+  transition: none;
+  pointer-events: none;
+}

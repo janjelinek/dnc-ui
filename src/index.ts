@@ -28,6 +28,7 @@ export { createPopover } from './components/popover.js'
 export { createModal } from './components/modal.js'
 export { createToaster } from './components/toast.js'
 export { createAccordion } from './components/accordion.js'
+export { createCarousel } from './components/carousel.js'
 export type { ButtonOptions } from './components/button.js'
 export type { SelectOptions, SelectOption } from './components/select.js'
 export type { SliderOptions } from './components/slider.js'
@@ -55,6 +56,7 @@ export type { PopoverOptions } from './components/popover.js'
 export type { ModalOptions, ModalController } from './components/modal.js'
 export type { ToasterOptions, ToastShowOptions } from './components/toast.js'
 export type { AccordionOptions, AccordionItem } from './components/accordion.js'
+export type { CarouselOptions } from './components/carousel.js'
 
 import { createButton } from './components/button.js'
 import { createSelect } from './components/select.js'
@@ -83,6 +85,7 @@ import { createPopover } from './components/popover.js'
 import { createModal } from './components/modal.js'
 import { createToaster } from './components/toast.js'
 import { createAccordion } from './components/accordion.js'
+import { createCarousel } from './components/carousel.js'
 import { configure, getConfig } from './config.js'
 import type { ButtonOptions } from './components/button.js'
 import type { SelectOptions } from './components/select.js'
@@ -111,6 +114,7 @@ import type { PopoverOptions } from './components/popover.js'
 import type { ModalOptions } from './components/modal.js'
 import type { ToasterOptions } from './components/toast.js'
 import type { AccordionOptions } from './components/accordion.js'
+import type { CarouselOptions } from './components/carousel.js'
 
 export const DNC = {
   configure,
@@ -142,4 +146,5 @@ export const DNC = {
   modal: (options: ModalOptions) => createModal(options),
   toaster: (options?: ToasterOptions) => createToaster(options),
   accordion: (options: AccordionOptions) => createAccordion(options),
+  carousel: (options: CarouselOptions) => createCarousel(options),
 }

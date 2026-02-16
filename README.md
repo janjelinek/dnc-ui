@@ -97,6 +97,13 @@ const toggle = DNC.toggle({
   onInteract: (checked) => console.log('Toggle:', checked),
 })
 document.body.appendChild(toggle)
+
+// Carousel — hover arrows or swipe mouse quickly left/right
+const carousel = DNC.carousel({
+  slides: ['<div>Slide 1</div>', '<div>Slide 2</div>'],
+  onInteract: (index) => console.log('Slide:', index),
+})
+document.body.appendChild(carousel)
 ```
 
 ## Plain HTML
