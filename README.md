@@ -115,3 +115,15 @@ document.body.appendChild(toggle)
 ## React / Vite / Next.js
 
 Import DNC and use in `useEffect` or `ref` to mount. Catch `DNCClickError` in an error boundary or `window.addEventListener('error', ...)`.
+
+---
+
+## Publishing (maintainers)
+
+```bash
+cd dnc-ui
+npm login
+npm publish
+```
+
+If the name `dnc-ui` is taken, use a scoped package: set `"name": "@janjelinek/dnc-ui"` in `package.json`, then `npm publish --access public`.
