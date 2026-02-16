@@ -2,6 +2,8 @@
 
 Minimal, stateless UI library for "do not click" interactions. All controls work via hover + wait. On click, throws `DNCClickError`.
 
+**Live docs & examples:** [dnc-ui.jelinek.work](https://dnc-ui.jelinek.work/)
+
 ## Install
 
 ```bash
