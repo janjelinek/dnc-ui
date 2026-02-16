@@ -1,0 +1,6 @@
+/* Minimal reset for DNC UI */
+.dnc-ui *,
+.dnc-ui *::before,
+.dnc-ui *::after {
+  box-sizing: border-box;
+}

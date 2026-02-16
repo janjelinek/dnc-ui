@@ -1,0 +1,40 @@
+{
+  "name": "dnc-ui",
+  "version": "1.0.0",
+  "description": "Minimal UI library for hover + wait interactions. No clicking — on click throws DNCClickError.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles.css": "./src/styles/dnc-ui.css"
+  },
+  "files": [
+    "dist",
+    "src/styles"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/janjelinek/dnc-ui.git"
+  },
+  "keywords": [
+    "ui",
+    "components",
+    "hover",
+    "no-click",
+    "vanilla",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "Jan Jelínek <https://github.com/janjelinek>",
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
