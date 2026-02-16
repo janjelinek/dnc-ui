@@ -1,6 +1,6 @@
 {
   "name": "dnc-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal UI library for hover + wait interactions. No clicking \u2014 on click throws DNCClickError.",
   "type": "module",
   "main": "dist/index.js",

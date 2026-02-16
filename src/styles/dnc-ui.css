@@ -135,7 +135,7 @@
 
 .dnc-slider-hover-dot {
   position: absolute;
-  left: var(--dnc-slider-hover-x, -999px);
+  left: var(--dnc-slider-hover-x, -9999px);
   top: 50%;
   transform: translate(-50%, -50%);
   width: calc(6px + var(--dnc-progress, 0) * 12px);
@@ -147,6 +147,11 @@
   opacity: 0.8;
   pointer-events: none;
   transition: none;
+  visibility: hidden;
+}
+
+.dnc-slider-track:hover .dnc-slider-hover-dot {
+  visibility: visible;
 }
 
 .dnc-slider-value {
